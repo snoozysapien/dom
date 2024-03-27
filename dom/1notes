@@ -1,0 +1,38 @@
+//these are notes which are copy pasted from browser console directly
+
+document.getElementById('title')
+<h1 id=​"title" class=​"heading">​ DOM learning on chai aur code ​</h1>​
+document.getElementById('title').id
+'title'
+document.getElementById('title').class
+undefined
+document.getElementById('title').className
+'heading'
+
+document.getElementById('title').getAttribute('id')
+'title'
+document.getElementById('title').getAttribute('class')
+'heading'
+
+document.getElementById('title').setAttribute('class', 'test') 
+undefined
+//it will set the name of class attribute to test from heading
+
+//get access of id and store it in a variable, for easy access of values
+const title = document.getElementById('title')
+title
+<h1 id=​"title" class=​"test">​ DOM learning on chai aur code ​</h1>​
+
+//applying some operation
+title.innerText
+'DOM learning on chai aur code'
+title.textContent
+' DOM learning \n            on chai aur code test text\n      
+it shows difference between innerText and textContent
+// innerContent show only visible text
+// textContent show whole text
+
+title.innerHTML
+' DOM learning \n            on chai aur code <span style="display: none;">test text</span>\n        '
+//it give whole text written incuding tags also
+
