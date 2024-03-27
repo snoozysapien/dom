@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+    
+</body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+    //above method of adding element is very complecated and might cause optimization issue therefore we use alter method
+
+    function addOptiLanguage(langName){
+        const li = documnet.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('golang')
+
+    //edit
+    document.querySelector("li:nt-child(2)")
+    //seconndLang.innerHtml = "Mojo"
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli)
+
+
+    //edit
+    const secondLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>Rypescript</li>'
+
+    //remove
+
+const lastLang =document.querySelector('li:last-child')
+langName.remove()
+ 
+
+</script>
+</html>
