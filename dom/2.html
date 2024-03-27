@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM by Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+    
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children); //it shows no. of children under parent
+    // console.log(parent.children[1].innerHTML);
+
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML);
+        
+    }
+    parent.children[1].style.color = "orannge"
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);//moving on child from parent
+    
+    //similarly we can move on to parent from child
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne);
+    console.log(dayOne.parentElement);
+    console.log(dayOne.nextSibling);
+
+    console.log("NODES: ", parent.childNodes);//shows tree structure, node list, all elements inculdin gaps
+    
+
+
+</script>
+</html>
